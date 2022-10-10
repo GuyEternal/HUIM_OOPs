@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-//Including all hader files needed
+//Including all header files needed
 #include <hospital.hpp>
 #include <location.hpp>
 #include <user.hpp>
