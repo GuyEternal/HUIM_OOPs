@@ -27,7 +27,7 @@ class hospital
     //Member Functions or Methods
     void get_contact()
     {
-        contact_details.show();
+        // contact_details.show();
     }
 
     void get_details()
