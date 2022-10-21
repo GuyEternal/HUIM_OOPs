@@ -14,7 +14,8 @@ class dept
     int get_avail(){
          cout<<"The department name is: "<<department_name <<endl;
          cout<<"The number of available doctors are: "<<num_doc<<endl;
-         cout<<"The available timings are: "<<timings; 
+         cout<<"The available time slots are: "<<endl;
+         timings.view_slots(); 
     }
     private:
     void set_avail(){
