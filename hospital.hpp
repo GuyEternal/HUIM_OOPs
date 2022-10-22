@@ -8,14 +8,14 @@ using namespace std;
 
 class hospital
 {
-    private:
-    
+   
+   public:
     hospital()
     {
         int num_doc = 0;
     }
 
-    public:
+ 
     string name;
     string organization_name;
     location address;
@@ -23,6 +23,6 @@ class hospital
     timing opd_timing;
     int num_doc;
 
-    protected:
+ 
 
 };

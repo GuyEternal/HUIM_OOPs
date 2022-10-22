@@ -1,5 +1,5 @@
-
-class dept
+#include"hospital.hpp"
+class dept 
 {
 
 };
