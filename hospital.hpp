@@ -8,12 +8,9 @@ using namespace std;
 
 class hospital
 {
-    private:
     
-    hospital()
-    {
-        int num_doc = 0;
-    }
+    
+  
 
     public:
     //Fields
@@ -25,6 +22,10 @@ class hospital
     int num_doc;
 
     //Member Functions or Methods
+      hospital()
+    {
+        int num_doc = 0;
+    }
     void get_contact()
     {
         contact_details.get_contact();
