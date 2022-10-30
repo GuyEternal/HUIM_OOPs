@@ -1,11 +1,18 @@
-#include<iostream>
+#ifndef PRIVATE_HPP
+#define PRIVATE_HPP
+#include<bits/stdc++.h>
 using namespace std;
-#include<dept.hpp>
-#include<hospital.hpp>
+#include"dept.hpp"
+#include"hospital.hpp"
 
 class Private : public hospital
 {
-    private:
+
+     private:
+    vector<dept> department_list;
+    timing surgery_timings;
+    timing opd_timings;
+   public :
     int set_surgery_avail(){
         surgery_timings.update_slots();
     }
@@ -15,10 +22,7 @@ class Private : public hospital
     }
 
     
-    public:
-    dept department_list[100];
-    timing surgery_timings;
-    timing opd_timings;
+   
 
     int get_opd_avail(){
         opd_timings.view_slots();
@@ -30,4 +34,4 @@ class Private : public hospital
 
 };
 
-
+#endif

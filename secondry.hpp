@@ -1,3 +1,5 @@
+#ifndef Secondry_HPP
+#define Secondry_HPP
 #include"public.hpp"
 class Secondry : public Public
 {
@@ -87,3 +89,4 @@ public:
         }
     }
 };
+#endif

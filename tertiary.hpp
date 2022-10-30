@@ -1,3 +1,5 @@
+#ifndef tertiary_HPP
+#define tertiary_HPP
 #include "public.hpp"
 class tertiary : public Public
 {
@@ -13,7 +15,7 @@ public:
         pair<string, string> a = {"ankit", "iamankit"};
         credentials_admins[a] = true;
         // creating database for admins which will be present in each hospital separetely
-
+         this->num_doc = 0;
         // use of department class
     }
     void get_details()
@@ -107,3 +109,5 @@ public:
           Timing_surgeries.update_slots();
     }
 };
+
+#endif

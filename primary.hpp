@@ -1,8 +1,11 @@
+
+#ifndef primary_HPP
+#define primary_HPP
 #include "public.hpp"
 
 class Primary : public Public
 {
-    int num_doc;
+  
 
     timing Timing_opd;
     map<pair<string, string>, bool> credentials_admins;
@@ -12,7 +15,7 @@ public:
     {
         pair<string, string> a = {"ankit", "iamankit"};
         credentials_admins[a] = true;
-
+           
     }
     void get_details()
     {
@@ -40,3 +43,5 @@ public:
         this->num_doc = num_doc;
     }
 };
+
+#endif
