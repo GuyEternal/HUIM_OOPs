@@ -1,13 +1,19 @@
+#ifndef Cont_HPP
+#define Cont_HPP
 #include <vector>
 #include<string>
-class contact
-{
+class contact{
+
     private:
     
 
     public:
     vector<string> phone;
-    vector<string> email;
+    string email;
+
+    contact(){
+        email =  "";
+    }
 
     void add_phone()
     {
@@ -25,25 +31,17 @@ class contact
         
     }
 
-    void add_phone()
+    void add_email()
     {
-        cout<<"Enter a to add an email, or enter q to quit";
-        char swtch;
-        cin>>swtch;
-        if (swtch == 'a')
-        {
-            cout<<"Enter phone number to add: ";
-            string em;
-            cin>>em;
-            phone.push_back(em);
-            return;
-        }
+        cout<<"Enter email\n";
+        
+        cin>>email;
 
     }
 
     void get_contact()
     {
-        int n = size(phone);
+        int n = phone.size();
         if (n == 0)
         {
             cout<<"Phone numbers not added yet";
@@ -56,15 +54,15 @@ class contact
                 cout<<phone[index]<<endl;
             }
         }
-        
-        n = size(email);
-        if (n == 0)
+        int k = email.size();
+       
+        if (k == 0)
         {
             cout<<"Emails not added yet";
         }
         else
         {
-            for (int index = 0; index < n; index++)
+            for (int index = 0; index < k; index++)
             {
                 cout<<email[index]<<endl;
             }
@@ -72,3 +70,4 @@ class contact
     }
 
 };
+#endif

@@ -1,3 +1,5 @@
+#ifndef PUBLIC_HPP
+#define PUBLIC_HPP
 #include "hospital.hpp"
 #include <bits/stdc++.h>
 #include "dept.hpp"
@@ -16,3 +18,4 @@ public:
 };
 
 
+#endif

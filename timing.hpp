@@ -1,3 +1,6 @@
+#ifndef TIME_HPP
+#define TIME_HPP
+
 #include<iostream>
 using namespace std;
 #include<vector>
@@ -55,3 +58,4 @@ class timing{
 
 
 
+#endif

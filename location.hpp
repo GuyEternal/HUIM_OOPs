@@ -1,3 +1,5 @@
+#ifndef Location_HPP
+#define Location_HPP
 class location
 {
     private:
@@ -28,7 +30,7 @@ class location
         }
 
         cout<<"Pls enter u to update pin_code, else enter q: ";
-        char c;
+       
         cin>>c;
         if (c == 'u')
         {
@@ -39,7 +41,7 @@ class location
         }
 
         cout<<"Pls enter u to update state, else enter q: ";
-        char c;
+       
         cin>>c;
         if (c == 'u')
         {
@@ -50,7 +52,7 @@ class location
         }
 
         cout<<"Pls enter u to update district, else enter q: ";
-        char c;
+       
         cin>>c;
         if (c == 'u')
         {
@@ -61,7 +63,7 @@ class location
         }
         
         cout<<"Pls enter u to update city, else enter q: ";
-        char c;
+       
         cin>>c;
         if (c == 'u')
         {
@@ -72,3 +74,5 @@ class location
         }
     }
 };
+
+#endif

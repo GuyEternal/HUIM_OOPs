@@ -1,9 +1,11 @@
+#ifndef Hospital_HPP
+#define Hospital_HPP
 #include<iostream>
 using namespace std;
 
-#include <location.hpp>
-#include <contact.hpp>
-#include <timing.hpp>
+#include "location.hpp"
+#include "contact.hpp"
+#include "timing.hpp"
 
 
 class hospital
@@ -28,7 +30,7 @@ class hospital
     }
     void get_contact()
     {
-        contact_details.get_contact();
+        // contact_details.get_contact();
     }
 
     void get_details()
@@ -60,3 +62,5 @@ class hospital
     protected:
 
 };
+
+#endif

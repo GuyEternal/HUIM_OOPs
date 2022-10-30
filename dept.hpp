@@ -1,7 +1,9 @@
+#ifndef Dept_HPP
+#define Dept_HPP
 #include<iostream>
 using namespace std;
 
-#include<timing.hpp>
+#include"timing.hpp"
 
 class dept
 {   
@@ -27,3 +29,4 @@ class dept
 
     
 };
+#endif
