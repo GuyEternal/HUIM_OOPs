@@ -11,8 +11,7 @@ class Secondry : public Public
 public:
     Secondry()
     {
-        pair<string, string> a = {"ankit", "iamankit"};
-        credentials_admins[a] = true;
+        
         // creating database for admins which will be present in each hospital separetely
 
         // use of department class

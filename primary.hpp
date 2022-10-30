@@ -7,7 +7,7 @@ class Primary : public Public
 {
   
 
-    timing Timing_opd;
+    
     map<pair<string, string>, bool> credentials_admins;
 
 public:
@@ -15,17 +15,18 @@ public:
     {
         pair<string, string> a = {"ankit", "iamankit"};
         credentials_admins[a] = true;
-           
+           this->num_doc = 0;
     }
     void get_details()
     {
+      cout<<"Name of Hospital is : "<<this->name;
        cout<<"No of Doctors are "<<num_doc<<endl;
-       Timing_opd.view_slots();
+       this->opd_timing.view_slots();
     }
 
     void get_opd_details()
     {
-       Timing_opd.view_slots();
+       this->opd_timing.view_slots();
     }
 
     void set_avail_doc(int num_doc)

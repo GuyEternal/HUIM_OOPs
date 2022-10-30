@@ -12,13 +12,13 @@ class timing{
     int max_slots;
     int used_slots;
     void view_slots(){
-        cout<<" The Time slots are: "<<endl;
+        cout<<"The Time slots are: "<<endl;
         for (int i = 0; i < time_slots.size(); i++)
         {
             cout<<time_slots[i]<<" ";
         }
-
-        cout<<" The available days are: "<<endl;
+     cout<<endl;
+        cout<<"The available days are: "<<endl;
         for (int i = 0; i < day_avail.size(); i++)
         {
             cout<<day_avail[i]<<" ";

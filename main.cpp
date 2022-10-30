@@ -14,10 +14,23 @@ using namespace std;
 #include"tertiary.hpp"
 int main()
 {
-    Secondry a;
-    a.name = "abc";
-     cout<<a.num_doc<<endl;
-    a.set_avail_doc(12);
-    a.get_details();
+    Primary a;
+      a.name = "Primary health center Nasik\n";
+    a.opd_timing.day_avail.push_back("Thursday");
+    a.opd_timing.day_avail.push_back("monday");
+    a.opd_timing.day_avail.push_back("tuesday");
+    a.opd_timing.day_avail.push_back("Wednesday");
+    a.opd_timing.day_avail.push_back("Friday");
+ a.opd_timing.time_slots.push_back("9 to 12 ");
+    a.opd_timing.time_slots.push_back("13 to 15 ");
+    a.opd_timing.time_slots.push_back("15 to 17 ");
+    a.opd_timing.time_slots.push_back("18 to 20 ");
+   
+
+  
+    
+ a.get_details();
+   
+
     
 }
