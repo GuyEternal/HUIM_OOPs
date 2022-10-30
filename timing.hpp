@@ -6,7 +6,8 @@ class timing{
     public:
     vector<string> time_slots;
     vector<string> day_avail;
-
+    int max_slots;
+    int used_slots;
     void view_slots(){
         cout<<" The Time slots are: "<<endl;
         for (int i = 0; i < time_slots.size(); i++)
@@ -23,7 +24,7 @@ class timing{
     }
 
     void update_slots(){
-        cout<<"If you want to add available day  press u else q "<<endl;
+        cout<<"If you want to add available day  press u or q to update time slot "<<endl;
         char u;
         cin>>u;
         string new_day;
@@ -35,11 +36,9 @@ class timing{
             cin>>u;
         } 
 
-        cout<<"If you want to add a time slot press u else q "<<endl;
-        char u;
-        cin>>u;
+     
         string new_slot;
-        while(u=='u'){
+        while(u=='q'){
             cout<<"The time slot to be added "<<endl;
             cin>>new_slot;
             time_slots.push_back(new_slot);
