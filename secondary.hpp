@@ -1,7 +1,7 @@
-#ifndef Secondry_HPP
-#define Secondry_HPP
+#ifndef Secondary_HPP
+#define Secondary_HPP
 #include"public.hpp"
-class Secondry : public Public
+class Secondary : public Public
 {
     vector<dept> departments;
 
@@ -9,7 +9,7 @@ class Secondry : public Public
     map<pair<string, string>, bool> credentials_admins;
 
 public:
-    Secondry()
+    Secondary()
     {
         pair<string, string> a = {"ankit", "iamankit"};
         credentials_admins[a] = true;
