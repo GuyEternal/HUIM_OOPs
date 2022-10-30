@@ -9,7 +9,7 @@ class dept
     string department_name;
     int num_doc;
     timing timings;
-
+     
     //functions
     int get_avail(){
          cout<<"The department name is: "<<department_name <<endl;
@@ -17,7 +17,7 @@ class dept
          cout<<"The available time slots are: "<<endl;
          timings.view_slots(); 
     }
-    private:
+   
     void set_avail(){
         cout<<"Enter the department name: "<<endl;
         cin>>department_name;
