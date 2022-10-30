@@ -5,6 +5,7 @@ class tertiary : public Public
     timing Timing_surgeries;
     timing Timing_opd;
     map<pair<string, string>, bool> credentials_admins;
+  
 
 public:
     tertiary()
@@ -102,7 +103,7 @@ public:
             cout << "YOU ARE NOT ALLOWED TO DO CHANGES IN DATABASE\n";
             return;
         }
-        // use of timing class
-        
+       
+          Timing_surgeries.update_slots();
     }
 };
