@@ -1,7 +1,7 @@
-#ifndef Secondry_HPP
-#define Secondry_HPP
-#include"public.hpp"
-class Secondry : public Public
+#ifndef Secondary_HPP
+#define Secondary_HPP
+#include "public.hpp"
+class Secondary : public Public
 {
    
     private:
@@ -10,7 +10,7 @@ class Secondry : public Public
     public:
     vector<dept> departments;
     int num_of_beds;
-    Secondry()
+    Secondary()
     {
         this->num_doc = 0;
         // creating database for admins which will be present in each hospital separetely
