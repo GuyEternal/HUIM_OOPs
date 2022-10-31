@@ -14,10 +14,12 @@ class Private : public hospital
     timing opd_timings;
     int set_surgery_avail(){
         surgery_timings.update_slots();
+        return 0;
     }
 
     int set_opd_avail(){
         opd_timings.update_slots();
+        return 0;
     }
 
     
@@ -25,6 +27,7 @@ class Private : public hospital
 
     int get_opd_avail(){
         opd_timings.view_slots();
+        return 0;
     }
 
     void get_surgery_avail(){

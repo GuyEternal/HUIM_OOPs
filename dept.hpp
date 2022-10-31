@@ -18,6 +18,7 @@ class dept
          cout<<"The number of available doctors are: "<<num_doc<<endl;
          cout<<"The available time slots are: "<<endl;
          timings.view_slots(); 
+         return 0;
     }
    
     void set_avail(){

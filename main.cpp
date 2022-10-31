@@ -16,46 +16,49 @@ using namespace std;
 int main()
 {
 
-    user A;
-    cout << "Enter 1 to login or 2 to sign-up\n";
-    int n;
-    cin >> n;
-    if (n == 1)
-    {
-
-        while (n)
+    {   
+        user A;
+        cout << "Enter 1 to login or 2 to sign-up\n";
+        int n;
+        cin >> n;
+        if (n == 1)
         {
-            cout << "Enter User name and password\n";
-            string user_name;
-            string password;
-            cin >> user_name >> password;
-            if (A.login(user_name, password))
+
+            while (n)
             {
-                cout << "Success\n";
-                break;
-            }
-            else
-            {
-                cout << "Retry or press 0 to sign-up or -1 to exit\n";
-                cin >> n;
-                if (n == -1)
+                cout << "Enter User name and password\n";
+                string user_name;
+                string password;
+                cin >> user_name >> password;
+                if (A.login(user_name, password))
                 {
-                    exit(2);
-                }
-                if (n == 0)
-                {
-                    A.sign_up();
+                    cout << "Success\n";
                     break;
+                }
+                else
+                {
+                    cout << "Retry or press 0 to sign-up or -1 to exit\n";
+                    cin >> n;
+                    if (n == -1)
+                    {
+                        exit(2);
+                    }
+                    if (n == 0)
+                    {
+                        A.sign_up();
+                        break;
+                    }
                 }
             }
         }
-    }
-    else
-    {
-        A.sign_up();
+        else
+        {
+            A.sign_up();
+        }
     }
 
-    {
+    // Dummy data
+    
         // Initialize all the hospitals
         // Atleast 2 each of private hospitals, tertiary, primary, and secondary health centres should be made
         // Private
@@ -303,7 +306,7 @@ int main()
         //Tertiary hospital initialization ends
 
         //Secondary hospital initialization begins
-        secondary h5;
+        Secondary h5;
 
         h5.name = "IMC Mumbai";
         h5.organization_name = "Government";
@@ -357,7 +360,7 @@ int main()
         h5.num_of_beds = 395;
         h5.trust_name = "Bharatiya Janta Trust";
 
-        secondary h6;
+        Secondary h6;
 
         h6.name = "IMC Mumbai";
         h6.organization_name = "Government";
@@ -455,7 +458,70 @@ int main()
         h7.trust_name = "Bharatiya Seva Trust";
         // Primary hospital initialization completes
         // Hospital initialization completed
-    }
+    
 
+    // //test code
+    // cout<<"Welcome to Hospital Availability System"<<endl;
+    // cout<<"Input the numbers in <> to do those certain tasks:"<<endl;
+    // cout<<"<1>See details of hospitals"<<endl;
+    // cout<<"<2>See opd timings of hospitals"<<endl;
+    // cout<<"<3>See surgery timings of hospitals"<<endl;
+    // cout<<"<4>See number of doctors in hospital"<<endl;
+    
+    // char c;
+    // cin>>c;
+    // if(c == '1')
+    // {
+    //     string temp;
+    //     cout<<"Enter name of hospital: "<<endl;
 
+    //     getline(cin, temp);
+
+    //     if(temp == h1.name)
+    //     {
+    //         h1.get_details();
+    //     }
+    //     if(temp == h2.name)
+    //     {
+    //         h2.get_details();
+    //     }
+    //     if(temp == h3.name)
+    //     {
+    //         h3.get_details();
+    //     }
+    //     if(temp == h4.name)
+    //     {
+    //         h4.get_details();
+    //     }
+    //     if(temp == h5.name)
+    //     {
+    //         h5.get_details();
+    //     }
+    //     if(temp == h6.name)
+    //     {
+    //         h6.get_details();
+    //     }
+    //     if(temp == h7.name)
+    //     {
+    //         h7.get_details();
+    //     }
+    //     if(temp == h8.name)
+    //     {
+    //         h8.get_details();
+    //     }
+    //     else cout<<"Not in our database";
+
+    // }
+    // if(c == '2')
+    // {
+
+    // }
+    // if(c == '3')
+    // {
+
+    // }
+    // if(c == '4')
+    // {
+
+    // }
 }
