@@ -32,3 +32,4 @@
 *.app
 
 try.cpp
+try.txt;

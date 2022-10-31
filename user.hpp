@@ -19,6 +19,6 @@ class user
        credentials_users["manav"] = "69_is_my_luv";
        credentials_users["deep"] = "i_luv_69";
    }
-
+ 
 
 };

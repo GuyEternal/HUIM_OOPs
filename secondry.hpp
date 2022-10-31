@@ -3,35 +3,45 @@
 #include"public.hpp"
 class Secondry : public Public
 {
-    vector<dept> departments;
+   
 
-    timing Timing_opd;
     map<pair<string, string>, bool> credentials_admins;
 
 public:
+  vector<dept> departments;
+  int num_of_beds;
     Secondry()
     {
-        
+        this->num_doc = 0;
         // creating database for admins which will be present in each hospital separetely
 
         // use of department class
     }
        void get_details()
     {
+
+
+        cout<<"OPD timing for all deparments are \n";
+        this->opd_timing.view_slots();
+        cout<<endl;
         cout << "Available department and no of doctors are \n";
         for (auto i : departments)
         {
             cout << i.department_name << " " << i.num_doc << " "
                  << "\n";
         }
-
+      int k = 0;
         for (auto i : departments)
-        {
+        {  
+            cout<<"For Department "<<i.department_name<<endl;
             i.timings.view_slots();
+            cout<<"\n\n\n\n";
+            k += i.num_doc;
         }
-
+          cout<<endl;
         cout << "Total doctors in hospital are \n";
-        cout << this->num_doc << endl;
+        this->num_doc = k;
+        cout<<num_doc<<endl;
     }
 
     void get_opd_details(string dept_name)
@@ -42,8 +52,9 @@ public:
         {
             if (i.department_name == dept_name)
             {
-                i.timings.view_slots();
+                 
                 dept_present = true;
+              this->opd_timing.view_slots();
             }
         }
         if (!dept_present)

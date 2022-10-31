@@ -1,20 +1,19 @@
 #ifndef Location_HPP
 #define Location_HPP
+#include<bits/stdc++.h>
+using namespace std;
 class location
 {
-    private:
+  
 
     public:
     string building;
-    int pin_code;
+    string pin_code;
     string state;
     string district;
     string city;
 
-    void get_details()
-    {
-
-    }
+   
 
     void update()
     {
