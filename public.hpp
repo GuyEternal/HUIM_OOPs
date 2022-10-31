@@ -8,9 +8,10 @@ using namespace std;
 
 class Public : public hospital
 {
+    public:
     string trust_name;
 
-public:
+    public:
     void get_details()
     {
         cout << "trust name is " << this->trust_name << " ";

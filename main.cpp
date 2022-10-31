@@ -238,6 +238,7 @@ int main()
     h3.surgery_timings.day_avail.push_back("Wednesday");
     h3.surgery_timings.day_avail.push_back("Thursday");
     h3.surgery_timings.day_avail.push_back("Friday");
+    h3.trust_name = "AIIMS";
 
     tertiary h4;
 
@@ -297,7 +298,7 @@ int main()
     h4.surgery_timings.day_avail.push_back("Wednesday");
     h4.surgery_timings.day_avail.push_back("Thursday");
     h4.surgery_timings.day_avail.push_back("Friday");
-
+    h4.trust_name = "AIIMS";
     //Tertiary hospital initialization ends
 
     //Secondary hospital initialization begins
@@ -353,6 +354,7 @@ int main()
     h5.departments.push_back(temp3);
 
     h5.num_of_beds = 395;
+    h5.trust_name = "Bharatiya Janta Trust";
 
     Secondry h6;
 
@@ -406,6 +408,7 @@ int main()
     h6.departments.push_back(temp3);
 
     h6.num_of_beds = 512;
+    h6.trust_name = "Bharatiya Janta Trust";
     //Secondary hospital initialization ends
     // Primary hospitals initialization begins
     Primary h7;
@@ -427,6 +430,7 @@ int main()
     h7.contact_details.email = "pmhchakmoh@pmc.com";
     h7.contact_details.phone.push_back("9465138646");
     h7.num_doc = 2;
+    h7.trust_name = "Bharatiya Janta Trust";
 
     Primary h8;
 
@@ -447,6 +451,7 @@ int main()
     h8.contact_details.email = "pmhjalgaon@pmc.com";
     h8.contact_details.phone.push_back("9465194646");
     h8.num_doc = 2;
+    h7.trust_name = "Bharatiya Seva Trust";
     // Primary hospital initialization completes
     // Hospital initialization completed
 
