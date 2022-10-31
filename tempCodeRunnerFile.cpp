@@ -1,1 +1,1 @@
-getline(read, a);
+ user A;
