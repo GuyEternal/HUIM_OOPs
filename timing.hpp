@@ -9,8 +9,7 @@ class timing{
     public:
     vector<string> time_slots;
     vector<string> day_avail;
-    int max_slots;
-    int used_slots;
+   
     void view_slots(){
         cout<<"The Time slots are: "<<endl;
         for (int i = 0; i < time_slots.size(); i++)

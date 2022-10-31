@@ -56,7 +56,7 @@ public:
 
     void set_avail_doc(int num_doc)
     {
-
+        cout<<"Verify if you are admin or not\n";
         cout << "Enter id and password ";
         string name, password;
         cin >> name >> password;
