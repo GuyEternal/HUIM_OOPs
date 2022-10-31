@@ -4,12 +4,12 @@
 class Secondry : public Public
 {
    
-
+    private:
     map<pair<string, string>, bool> credentials_admins;
 
-public:
-  vector<dept> departments;
-  int num_of_beds;
+    public:
+    vector<dept> departments;
+    int num_of_beds;
     Secondry()
     {
         this->num_doc = 0;

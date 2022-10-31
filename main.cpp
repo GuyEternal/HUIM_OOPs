@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-#include <fstream>
 // Including all header files needed
 #include "hospital.hpp"
 #include "location.hpp"
@@ -16,49 +15,49 @@ using namespace std;
 
 int main()
 {
-   
-    user A;
-  cout << "Enter 1 to login or 2 to sign-up\n";
-  int n;
-  cin >> n;
-  if (n == 1)
-  {
 
-    while (n)
+    user A;
+    cout << "Enter 1 to login or 2 to sign-up\n";
+    int n;
+    cin >> n;
+    if (n == 1)
     {
-      cout << "Enter User name and password\n";
-      string user_name;
-      string password;
-      cin >> user_name >> password;
-      if (A.login(user_name, password))
-      {
-        cout << "Success\n";
-        break;
-      }
-      else
-      {
-        cout << "Retry or press 0 to sign-up or -1 to exit\n";
-        cin >> n;
-        if (n == -1)
+
+        while (n)
         {
-          exit(2);
+            cout << "Enter User name and password\n";
+            string user_name;
+            string password;
+            cin >> user_name >> password;
+            if (A.login(user_name, password))
+            {
+                cout << "Success\n";
+                break;
+            }
+            else
+            {
+                cout << "Retry or press 0 to sign-up or -1 to exit\n";
+                cin >> n;
+                if (n == -1)
+                {
+                    exit(2);
+                }
+                if (n == 0)
+                {
+                    A.sign_up();
+                    break;
+                }
+            }
         }
-        if (n == 0)
-        {
-          A.sign_up();
-          break;
-        }
-      }
     }
-  }
-  else
-  {
-    A.sign_up();
-  }
+    else
+    {
+        A.sign_up();
+    }
 
     // Initialize all the hospitals
     // Atleast 2 each of private hospitals, tertiary, primary, and secondary health centres should be made
-    //Private
+    // Private
     Private h1;
 
     h1.name = "BIRLA Hospital Gwalior";
@@ -179,7 +178,7 @@ int main()
     h2.surgery_timings.day_avail.push_back("Thursday");
     h2.surgery_timings.day_avail.push_back("Friday");
     // 2 Private hospitals initialized
-    
+
     // 2 Tertiary Health Centres Initializing
     tertiary h3;
 
@@ -299,122 +298,157 @@ int main()
     h4.surgery_timings.day_avail.push_back("Thursday");
     h4.surgery_timings.day_avail.push_back("Friday");
 
+    //Tertiary hospital initialization ends
 
-        // Initialize all the locations, departments, contacts, timings of the hospitals
-    
+    //Secondary hospital initialization begins
+    Secondry h5;
 
-    // Initialize all the users
-    // Each hospital should contain atleast 3 users.
+    h5.name = "IMC Mumbai";
+    h5.organization_name = "Government";
+    h5.address.building = "IMC Campus";
+    h5.address.city = "Mumbai";
+    h5.address.state = "Maharashtra";
+    h5.address.pin_code = "756912";
+    h5.opd_timing.time_slots.push_back("10-12");
+    h5.opd_timing.time_slots.push_back("14-18");
+    h5.opd_timing.day_avail.push_back("Monday");
+    h5.opd_timing.day_avail.push_back("Tuesday");
+    h5.opd_timing.day_avail.push_back("Wednesday");
+    h5.opd_timing.day_avail.push_back("Thursday");
+    h5.opd_timing.day_avail.push_back("Friday");
+    h5.contact_details.email = "imcmum@imc.com";
+    h5.contact_details.phone.push_back("6846545664");
+    temp1.department_name = "ENT";
+    temp1.num_doc = 54;
+    temp1.timings.time_slots.push_back("10-12");
+    temp1.timings.time_slots.push_back("14-18");
+    temp1.timings.day_avail.push_back("Monday");
+    temp1.timings.day_avail.push_back("Tuesday");
+    temp1.timings.day_avail.push_back("Wednesday");
+    temp1.timings.day_avail.push_back("Thursday");
+    temp1.timings.day_avail.push_back("Friday");
+
+    temp2.department_name = "Pediatrics";
+    temp2.num_doc = 94;
+    temp2.timings.time_slots.push_back("10-12");
+    temp2.timings.time_slots.push_back("14-18");
+    temp2.timings.day_avail.push_back("Monday");
+    temp2.timings.day_avail.push_back("Tuesday");
+    temp2.timings.day_avail.push_back("Wednesday");
+    temp2.timings.day_avail.push_back("Thursday");
+    temp2.timings.day_avail.push_back("Friday");
+
+    temp3.department_name = "Orthopedics";
+    temp3.num_doc = 67;
+    temp3.timings.time_slots.push_back("10-12");
+    temp3.timings.time_slots.push_back("14-18");
+    temp3.timings.day_avail.push_back("Monday");
+    temp3.timings.day_avail.push_back("Tuesday");
+    temp3.timings.day_avail.push_back("Wednesday");
+    temp3.timings.day_avail.push_back("Thursday");
+    temp3.timings.day_avail.push_back("Friday");
+
+    h5.departments.push_back(temp1);
+    h5.departments.push_back(temp2);
+    h5.departments.push_back(temp3);
+
+    h5.num_of_beds = 395;
+
+    Secondry h6;
+
+    h6.name = "IMC Mumbai";
+    h6.organization_name = "Government";
+    h6.address.building = "IMC Campus";
+    h6.address.city = "Mumbai";
+    h6.address.state = "Maharashtra";
+    h6.address.pin_code = "756912";
+    h6.opd_timing.time_slots.push_back("10-12");
+    h6.opd_timing.time_slots.push_back("14-18");
+    h6.opd_timing.day_avail.push_back("Monday");
+    h6.opd_timing.day_avail.push_back("Tuesday");
+    h6.opd_timing.day_avail.push_back("Wednesday");
+    h6.opd_timing.day_avail.push_back("Thursday");
+    h6.opd_timing.day_avail.push_back("Friday");
+    h6.contact_details.email = "imcmum@imc.com";
+    h6.contact_details.phone.push_back("6846545664");
+    temp1.department_name = "ENT";
+    temp1.num_doc = 83;
+    temp1.timings.time_slots.push_back("10-12");
+    temp1.timings.time_slots.push_back("14-18");
+    temp1.timings.day_avail.push_back("Monday");
+    temp1.timings.day_avail.push_back("Tuesday");
+    temp1.timings.day_avail.push_back("Wednesday");
+    temp1.timings.day_avail.push_back("Thursday");
+    temp1.timings.day_avail.push_back("Friday");
+
+    temp2.department_name = "Pediatrics";
+    temp2.num_doc = 94;
+    temp2.timings.time_slots.push_back("10-12");
+    temp2.timings.time_slots.push_back("14-18");
+    temp2.timings.day_avail.push_back("Monday");
+    temp2.timings.day_avail.push_back("Tuesday");
+    temp2.timings.day_avail.push_back("Wednesday");
+    temp2.timings.day_avail.push_back("Thursday");
+    temp2.timings.day_avail.push_back("Friday");
+
+    temp3.department_name = "Orthopedics";
+    temp3.num_doc = 97;
+    temp3.timings.time_slots.push_back("10-12");
+    temp3.timings.time_slots.push_back("14-18");
+    temp3.timings.day_avail.push_back("Monday");
+    temp3.timings.day_avail.push_back("Tuesday");
+    temp3.timings.day_avail.push_back("Wednesday");
+    temp3.timings.day_avail.push_back("Thursday");
+    temp3.timings.day_avail.push_back("Friday");
+
+    h6.departments.push_back(temp1);
+    h6.departments.push_back(temp2);
+    h6.departments.push_back(temp3);
+
+    h6.num_of_beds = 512;
+    //Secondary hospital initialization ends
+    // Primary hospitals initialization begins
+    Primary h7;
+
+    h7.name = "PMH Chakmoh";
+    h7.organization_name = "Government";
+    h7.address.building = "PMC Campus";
+    h7.address.city = "Chakmoh";
+    h7.address.state = "Himachal Pradesh";
+    h7.address.pin_code = "658942";
+    h7.opd_timing.time_slots.push_back("10-12");
+    h7.opd_timing.time_slots.push_back("14-18");
+    h7.opd_timing.day_avail.push_back("Monday");
+    h7.opd_timing.day_avail.push_back("Tuesday");
+    h7.opd_timing.day_avail.push_back("Wednesday");
+    h7.opd_timing.day_avail.push_back("Thursday");
+    h7.opd_timing.day_avail.push_back("Friday");
+    h7.opd_timing.day_avail.push_back("Saturday");
+    h7.contact_details.email = "pmhchakmoh@pmc.com";
+    h7.contact_details.phone.push_back("9465138646");
+    h7.num_doc = 2;
+
+    Primary h8;
+
+    h8.name = "PMH Jalgaon";
+    h8.organization_name = "Government";
+    h8.address.building = "PMH Campus";
+    h8.address.city = "Jalgaon";
+    h8.address.state = "Maharashtra";
+    h8.address.pin_code = "946548";
+    h8.opd_timing.time_slots.push_back("10-12");
+    h8.opd_timing.time_slots.push_back("14-18");
+    h8.opd_timing.day_avail.push_back("Monday");
+    h8.opd_timing.day_avail.push_back("Tuesday");
+    h8.opd_timing.day_avail.push_back("Wednesday");
+    h8.opd_timing.day_avail.push_back("Thursday");
+    h8.opd_timing.day_avail.push_back("Friday");
+    h8.opd_timing.day_avail.push_back("Saturday");
+    h8.contact_details.email = "pmhjalgaon@pmc.com";
+    h8.contact_details.phone.push_back("9465194646");
+    h8.num_doc = 2;
+    // Primary hospital initialization completes
+    // Hospital initialization completed
 
 
-
-   // vector<Secondry> list1;
-   // Secondry a;
-   // dept b;
-
-   // ifstream read("try.txt");
-
-   // while (true)
-   // {   cout<<"Running\n";
-   //    string name, organisation, locate;
-
-   //    getline(read, name);
-
-   //    a.name = name;
-   //    getline(read, organisation);
-
-   //    a.organization_name = organisation;
-   //    getline(read, locate);
-
-   //    location address;
-   //    vector<string> address_component;
-   //    string extra = "";
-   //    for (int i = 0; i < locate.size(); i++)
-   //    {
-
-   //       if (locate[i] == ',')
-   //       {
-   //          address_component.push_back(extra);
-   //          extra = "";
-   //       }
-   //       extra.push_back(locate[i]);
-   //    }
-
-   //    address.building = address_component[0];
-   //    address.pin_code = address_component[1];
-   //    address.state = address_component[2];
-   //    address.district = address_component[3];
-   //    address.city = address_component[4];
-   //    string num_beds;
-   //    getline(read, num_beds);
-   //    a.num_of_beds = stoi(num_beds);
-      
-      
-   //    while(true){
-       
-   //    dept b;
-   //    string dept_name;
-   //    getline(read, dept_name);
-    
-   //    b.department_name = dept_name;
-
-   //    string num_doctor;
-   //    getline(read, num_doctor);
-   //    b.num_doc = stoi(num_doctor);
-
-   //    string s;
-   //    getline(read, s);
-   //    string temp = "";
-   //    for (int i = 0; i < s.size(); i++)
-   //    {
-
-   //       if (s[i] == ',')
-   //       {
-   //          b.timings.time_slots.push_back(temp);
-   //          temp = "";
-   //          continue;
-   //       }
-   //       temp.push_back(s[i]);
-   //    }
-
-   //    string s2;
-   //    getline(read, s2);
-
-   //    for (int i = 0; i < s2.size(); i++)
-   //    {
-
-   //       if (s2[i] == ',')
-   //       {
-   //          b.timings.day_avail.push_back(temp);
-   //          temp = "";
-   //          continue;
-   //       }
-   //       temp.push_back(s2[i]);
-   //    }
-
-   //    a.departments.push_back(b);
-          
-   //          char c = read.get();
-           
-   //         if(c != '|'){
-   //            break;
-   //         }
-   //         char(read.get());
-   //       // just reading newline character
-   //    }
-           
-
-   //    if (read.eof() == 0)
-   //    {
-   //       break;
-   //    }
-
-   // }
-
-   
-   // read.close();
-   // a.get_details();
-   // for(int i = 0; i < list1.size(); i++){
-   //        list1[i].get_details();
-   // }
 }
