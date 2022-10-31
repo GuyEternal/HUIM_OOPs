@@ -3,13 +3,14 @@
 #include "public.hpp"
 class tertiary : public Public
 {
+    public:
     vector<dept> departments;
-    timing Timing_surgeries;
+    timing surgery_timings;
     timing Timing_opd;
     map<pair<string, string>, bool> credentials_admins;
   
 
-public:
+
     tertiary()
     {
         pair<string, string> a = {"ankit", "iamankit"};
@@ -92,7 +93,7 @@ public:
 
     void get_surgery_avail()
     {
-        Timing_surgeries.view_slots();
+        surgery_timings.view_slots();
     }
 
     void set_surgery_avail()
@@ -106,7 +107,7 @@ public:
             return;
         }
        
-          Timing_surgeries.update_slots();
+          surgery_timings.update_slots();
     }
 };
 

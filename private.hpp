@@ -8,11 +8,10 @@ using namespace std;
 class Private : public hospital
 {
 
-     private:
+    public:
     vector<dept> department_list;
     timing surgery_timings;
     timing opd_timings;
-   public :
     int set_surgery_avail(){
         surgery_timings.update_slots();
     }
