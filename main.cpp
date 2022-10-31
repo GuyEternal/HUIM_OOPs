@@ -8,16 +8,21 @@ using namespace std;
 #include "timing.hpp"
 #include "contact.hpp"
 #include "dept.hpp"
-#include"public.hpp"
-#include"primary.hpp"
-#include"secondry.hpp"
-#include"tertiary.hpp"
+#include "public.hpp"
+#include "primary.hpp"
+#include "secondary.hpp"
+#include "tertiary.hpp"
+
 int main()
 {
-    Secondry a;
-    a.name = "abc";
-     cout<<a.num_doc<<endl;
-    a.set_avail_doc(12);
-    a.get_details();
+    // Initialize all the hospitals
+    // Atleast 2 each of private hospitals, tertiary, primary, and secondary health centres should be made
     
+
+        // Initialize all the locations, departments, contacts, timings of the hospitals
+    
+
+    // Initialize all the users
+    // Each hospital should contain atleast 3 users.
+
 }
