@@ -14,7 +14,8 @@ class Secondary : public Public
     {
         this->num_doc = 0;
         // creating database for admins which will be present in each hospital separetely
-
+        pair<string, string> a = {"ankit", "iamankit"};
+        credentials_admins[a] = true;
         // use of department class
     }
        void get_details()
