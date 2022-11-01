@@ -26,20 +26,21 @@ void menu2()
     cout << "Enter n to search by name\n";
     cout << "Enter s to stop searching\n";
 }
+
 void search_name(vector<Primary> &list1, vector<Secondary> &list2, vector<tertiary> &list3, vector<Private> &list4)
 {
     menu();
     int option;
     cin >> option;
     string name_hospital;
+    cout << "Enter name of hospital\n";
+    cin.ignore();
     getline(cin, name_hospital);
     bool present = false;
+
     switch (option)
     {
     case 1:
-        cout << "Enter name of hospital\n";
-
-        getline(cin, name_hospital);
 
         for (int i = 0; i < list1.size(); i++)
         {
@@ -57,9 +58,6 @@ void search_name(vector<Primary> &list1, vector<Secondary> &list2, vector<tertia
         break;
 
     case 2:
-        cout << "Enter name of hospital\n";
-
-        getline(cin, name_hospital);
 
         for (int i = 0; i < list2.size(); i++)
         {
@@ -76,21 +74,17 @@ void search_name(vector<Primary> &list1, vector<Secondary> &list2, vector<tertia
         }
         break;
     case 3:
-        cout << "Enter name of hospital\n";
-
-        getline(cin, name_hospital);
 
         for (int i = 0; i < list3.size(); i++)
         {
 
             if (list3[i].name == name_hospital)
             {
-
+                cout << "Present Hospitals are\n";
                 present = true;
                 cout << "Detail of this hospital are as follows\n";
                 list3[i].get_details();
             }
-            cout << name_hospital << " ";
         }
         if (!present)
         {
@@ -98,9 +92,6 @@ void search_name(vector<Primary> &list1, vector<Secondary> &list2, vector<tertia
         }
         break;
     case 4:
-        cout << "Enter name of hospital\n";
-
-        getline(cin, name_hospital);
 
         for (int i = 0; i < list4.size(); i++)
         {
@@ -127,24 +118,44 @@ void search_city(vector<Primary> &list1, vector<Secondary> &list2, vector<tertia
     int option;
     cin >> option;
     string name_hospital;
+    cout << "Enter name of city\n";
+    cin.ignore();
     getline(cin, name_hospital);
     bool present = false;
+    int index = 1;
+    vector<tertiary> res3;
+    vector<Secondary> res2;
+    vector<Primary> res1;
+    vector<Private> res4;
+    int serial_index;
     switch (option)
     {
     case 1:
-        cout << "Enter name of city\n";
-
-        getline(cin, name_hospital);
 
         for (int i = 0; i < list1.size(); i++)
         {
-
             if (list1[i].address.city == name_hospital)
             {
+                if (present == false)
+                {
+                    cout << "Available Hospitals are\n";
+                }
+
                 present = true;
-                list1[i].get_details();
+                // list3[i].get_details();
+
+                res1.push_back(list1[i]);
+                cout << index << ". " << list1[i].name << endl;
+                index++;
             }
         }
+        if (present)
+        {
+            cout << "Enter serial no of hospital you want to get details\n";
+            cin >> serial_index;
+            res1[serial_index - 1].get_details();
+        }
+
         if (!present)
         {
             cout << "Hospital not found\n";
@@ -152,60 +163,99 @@ void search_city(vector<Primary> &list1, vector<Secondary> &list2, vector<tertia
         break;
 
     case 2:
-        cout << "Enter name of hospital\n";
-
-        getline(cin, name_hospital);
 
         for (int i = 0; i < list2.size(); i++)
         {
-
             if (list2[i].address.city == name_hospital)
             {
+                if (present == false)
+                {
+                    cout << "Available Hospitals are\n";
+                }
+
                 present = true;
-                list2[i].get_details();
+                // list3[i].get_details();
+
+                res2.push_back(list2[i]);
+                cout << index << ". " << list2[i].name << endl;
+                index++;
             }
         }
+        if (present)
+        {
+
+            cout << "Enter serial no of hospital you want to get details\n";
+
+            cin >> serial_index;
+            res2[serial_index - 1].get_details();
+        }
+
         if (!present)
         {
             cout << "Hospital not found\n";
         }
         break;
     case 3:
-        cout << "Enter name of city\n";
-
-        getline(cin, name_hospital);
 
         for (int i = 0; i < list3.size(); i++)
         {
             // will print all hospitals having city name
+
             if (list3[i].address.city == name_hospital)
             {
 
+                if (present == false)
+                {
+                    cout << "Available Hospitals are\n";
+                }
+
                 present = true;
-                cout << "Detail of this hospital are as follows\n";
-                list3[i].get_details();
+                // list3[i].get_details();
+
+                res3.push_back(list3[i]);
+                cout << index << ". " << list3[i].name << endl;
+                index++;
             }
-            cout << name_hospital << " ";
         }
+        if (present)
+        {
+            cout << "Enter serial no of hospital you want to get details\n";
+            cin >> serial_index;
+            res3[serial_index - 1].get_details();
+        }
+
         if (!present)
         {
             cout << "Hospital not found\n";
         }
         break;
     case 4:
-        cout << "Enter name of hospital\n";
-
-        getline(cin, name_hospital);
 
         for (int i = 0; i < list4.size(); i++)
         {
 
             if (list4[i].address.city == name_hospital)
             {
+                if (present == false)
+                {
+                    cout << "Available Hospitals are\n";
+                }
+
                 present = true;
-                list4[i].get_details();
+                // list3[i].get_details();
+
+                res4.push_back(list4[i]);
+                cout << index << ". " << list3[i].name << endl;
+                index++;
             }
         }
+        if (present)
+        {
+            cout << "Enter serial no of hospital you want to get details\n";
+            cin >> serial_index;
+            res4[serial_index - 1].get_details();
+        }
+
         if (!present)
         {
             cout << "Hospital not found\n";
@@ -323,7 +373,6 @@ int main()
     h1.surgery_timings.day_avail.push_back("Wednesday");
     h1.surgery_timings.day_avail.push_back("Thursday");
     h1.surgery_timings.day_avail.push_back("Friday");
-
     temp1.timings.time_slots.clear();
     temp2.timings.time_slots.clear();
     temp3.timings.time_slots.clear();
@@ -472,7 +521,7 @@ int main()
     h4.name = "AIIMS Delhi";
     h4.organization_name = "Government";
     h4.address.building = "AIIMS Campus";
-    h4.address.city = "Delhi";
+    h4.address.city = "Bhopal";
     h4.address.state = "Delhi";
     h4.address.pin_code = "231156";
     h4.opd_timing.time_slots.push_back("10-12");
@@ -533,6 +582,7 @@ int main()
     temp1.timings.day_avail.clear();
     temp2.timings.day_avail.clear();
     temp3.timings.day_avail.clear();
+
     // Tertiary hospital initialization ends
 
     // Secondary hospital initialization begins
@@ -596,7 +646,7 @@ int main()
     temp1.timings.day_avail.clear();
     temp2.timings.day_avail.clear();
     temp3.timings.day_avail.clear();
-    
+
     Secondary h6;
 
     h6.name = "IMC Mumbai";
@@ -659,7 +709,6 @@ int main()
     temp1.timings.day_avail.clear();
     temp2.timings.day_avail.clear();
     temp3.timings.day_avail.clear();
-
     Primary h7;
 
     h7.name = "PMH Chakmoh";
@@ -680,7 +729,12 @@ int main()
     h7.contact_details.phone.push_back("9465138646");
     h7.num_doc = 2;
     h7.trust_name = "Bharatiya Janta Trust";
-
+    temp1.timings.time_slots.clear();
+    temp2.timings.time_slots.clear();
+    temp3.timings.time_slots.clear();
+    temp1.timings.day_avail.clear();
+    temp2.timings.day_avail.clear();
+    temp3.timings.day_avail.clear();
     Primary h8;
 
     h8.name = "PMH Jalgaon";
@@ -703,6 +757,13 @@ int main()
     h7.trust_name = "Bharatiya Seva Trust";
     // Primary hospital initialization completes
     // Hospital initialization completed
+
+    temp1.timings.time_slots.clear();
+    temp2.timings.time_slots.clear();
+    temp3.timings.time_slots.clear();
+    temp1.timings.day_avail.clear();
+    temp2.timings.day_avail.clear();
+    temp3.timings.day_avail.clear();
 
     h8.name = "PMH Jalgaon";
     h8.organization_name = "Government";
