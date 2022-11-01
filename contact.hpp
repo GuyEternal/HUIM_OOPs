@@ -31,6 +31,11 @@ class contact{
         
     }
 
+    void add_phone(string temp)
+    {
+        phone.push_back(temp);
+    }
+
     void add_email()
     {
         cout<<"Enter email\n";
