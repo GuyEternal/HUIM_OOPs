@@ -16,6 +16,12 @@ class Public : public hospital
     {
         cout << "trust name is " << this->trust_name << " ";
     }
+
+    void set_trust_name()
+    {
+        cout<<"Enter the trust name: ";
+        cin>>trust_name;
+    }
 };
 
 
