@@ -35,7 +35,7 @@ class hospital
     }
     void get_contact()
     {
-        // contact_details.get_contact();
+        contact_details.get_contact();
     }
 
     void get_details()
