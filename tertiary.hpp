@@ -20,21 +20,34 @@ class tertiary : public Public
         // use of department class
     }
     void get_details()
-    {
+    {    
+        
+        cout<<"Name: "<<name<<endl;
+        cout<<"Organisation: "<<organization_name<<endl;
+         this->address.address_show();
+        // address.show();
+        // contact_details.show();
+        // opd_timing.show();
+       int sum = 0;
         cout << "Available department and no of doctors are \n";
         for (auto i : departments)
-        {
+        {   sum += i.num_doc;
             cout << i.department_name << " " << i.num_doc << " "
                  << "\n";
         }
 
         for (auto i : departments)
-        {
+        {     cout<<"\n\n";
+            cout<<"For department "<<i.department_name<<endl;
             i.timings.view_slots();
+          
         }
-
+        cout<<endl;
+       this->num_doc = sum;
         cout << "Total doctors in hospital are \n";
         cout << this->num_doc << endl;
+        cout<<"Contact Details of the hospital are \n";
+        this->contact_details.get_contact();
     }
 
     void get_opd_details(string dept_name)
@@ -44,7 +57,7 @@ class tertiary : public Public
         for (auto i : departments)
         {
             if (i.department_name == dept_name)
-            {
+            {  cout<<"For department "<<dept_name<<" OPD time slots are"<<endl;
                 i.timings.view_slots();
                 dept_present = true;
             }
@@ -55,7 +68,7 @@ class tertiary : public Public
         }
     }
 
-    void set_avail_doc(int num_doc)
+    void set_avail_doc()
     {
         cout<<"Verify if you are admin or not\n";
         cout << "Enter id and password ";
@@ -69,6 +82,8 @@ class tertiary : public Public
         cout << "Enter department \n";
         string dept_name;
         cin >> dept_name;
+     
+       
         bool dept_present = false;
         for (auto i : departments)
         {
@@ -92,12 +107,12 @@ class tertiary : public Public
     }
 
     void get_surgery_avail()
-    {
+    {   cout<<"Surgery slots in hospital "<<this->name<<endl;
         surgery_timings.view_slots();
     }
 
     void set_surgery_avail()
-    {
+    {    cout<<"Verify if you are admin or not\n";
         cout << "Enter id and password\n ";
         string name, password;
         cin >> name >> password;

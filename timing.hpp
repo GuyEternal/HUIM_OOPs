@@ -26,16 +26,24 @@ class timing{
     }
 
     void update_slots(){
-        cout<<"If you want to add available day  press u or q to update time slot "<<endl;
+        cout<<"If you want to add available day  press u or q to update time slot or s to stop"<<endl;
         char u;
         cin>>u;
+        if(u == 's'){
+            return;
+        }
         string new_day;
         while(u=='u'){
             cout<<"The day to be added "<<endl;
             cin>>new_day;
             time_slots.push_back(new_day);
-             cout<<"If you want to add available day  press u else q "<<endl;
+            cout<<"Successfully updated!\n";
+             cout<<"If you want to add available day  press u else q or s to stop"<<endl;
             cin>>u;
+            if(u == 's'){
+                cout<<"Saving changes\n";
+              return;
+            }
         } 
 
      
@@ -44,8 +52,12 @@ class timing{
             cout<<"The time slot to be added "<<endl;
             cin>>new_slot;
             time_slots.push_back(new_slot);
-            cout<<"If you want to add a time slot press u else q "<<endl;
+            cout<<"Successfully updated!\n";
+            cout<<"If you want to add a time slot press u else q or s to stop"<<endl;
             cin>>u;
+            if(u == 's'){
+                return;
+            }
         } 
 
          

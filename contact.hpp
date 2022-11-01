@@ -62,10 +62,7 @@ class contact{
         }
         else
         {
-            for (int index = 0; index < k; index++)
-            {
-                cout<<email[index]<<endl;
-            }
+           cout<<email<<endl;
         }
     }
 

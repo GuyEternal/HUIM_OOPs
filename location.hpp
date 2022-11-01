@@ -13,7 +13,11 @@ class location
     string district;
     string city;
 
-   
+   void address_show(){
+    cout<<"Address is \n";
+    cout<<this->state<<" "<<this->district<<" "<<this->city<<" "<<this->building<<" "<<this->pin_code<<endl;
+    cout<<endl;
+   }
 
     void update()
     {

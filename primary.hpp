@@ -19,9 +19,12 @@ public:
     }
     void get_details()
     {
-      cout<<"Name of Hospital is : "<<this->name;
+      cout<<"Name of Hospital is : "<<this->name<<endl;
        cout<<"No of Doctors are "<<num_doc<<endl;
        this->opd_timing.view_slots();
+       cout<<"\n\n";
+          cout<<"Contact Details of the hospital are \n";
+          this->contact_details.get_contact();
     }
 
     void get_opd_details()

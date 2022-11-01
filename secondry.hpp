@@ -42,6 +42,8 @@ class Secondry : public Public
         cout << "Total doctors in hospital are \n";
         this->num_doc = k;
         cout<<num_doc<<endl;
+          cout<<"Contact Details of the hospital are \n";
+          this->contact_details.get_contact();
     }
 
     void get_opd_details(string dept_name)

@@ -12,7 +12,188 @@ using namespace std;
 #include "secondry.hpp"
 #include "tertiary.hpp"
 #include "private.hpp"
+void menu(){
+        cout<<"Enter 1 to Search in Primary Hospitals\n";
+        cout<<"Enter 2 to Search in Secodary Hospitals\n";
+        cout<<"Enter 3 to Search in Tertiary Hospitals\n";
+        cout<<"Enter 4 to Search in Private Hospitals\n";
+        cout<<"Enter -1 to leave \n";
+       
+}
+void menu2(){
+    cout<<"Enter c to search by city\n";
+    cout<<"Enter n to search by name\n";
+    cout<<"Enter s to stop searching\n";
+}
+void search_name(vector<Primary> &list1,vector<Secondry> &list2,vector<tertiary> &list3,vector<Private> &list4){
+    menu();
+    int option;
+   cin>>option;
+    string name_hospital;
+    getline(cin, name_hospital);
+    bool present = false;
+    switch (option)
+    {
+        case 1:
+        cout<<"Enter name of hospital\n";
+       
+        getline(cin, name_hospital);
+      
+        for(int i = 0; i<list1.size(); i++){
+           
+          if(list1[i].name == name_hospital){
+               present = true;
+               list1[i].get_details();
+          }
+          
+        }
+        if(!present){
+            cout<<"Hospital not found\n";
+        }
+        break;
 
+        case 2:
+         cout<<"Enter name of hospital\n";
+       
+        getline(cin, name_hospital);
+        
+        for(int i = 0; i<list2.size(); i++){
+           
+          if(list2[i].name == name_hospital){
+               present = true;
+               list2[i].get_details();
+          }
+          
+        }
+        if(!present){
+            cout<<"Hospital not found\n";
+        }
+        break;
+     case 3:
+      cout<<"Enter name of hospital\n";
+       
+        getline(cin, name_hospital);
+        
+        for(int i = 0; i<list3.size(); i++){
+         
+          if(list3[i].name == name_hospital){
+           
+               present = true;
+               cout<<"Detail of this hospital are as follows\n";
+               list3[i].get_details();
+          }
+          cout<<name_hospital<<" ";
+        }
+        if(!present){
+            cout<<"Hospital not found\n";
+        }
+    break;
+        case 4 :
+         cout<<"Enter name of hospital\n";
+       
+        getline(cin, name_hospital);
+         
+        for(int i = 0; i<list4.size(); i++){
+           
+          if(list4[i].name == name_hospital){
+               present = true;
+               list4[i].get_details();
+          }
+          
+        }
+        if(!present){
+            cout<<"Hospital not found\n";
+        }
+        break;
+    default:
+        break;
+    }
+}
+
+  void search_city(vector<Primary> &list1,vector<Secondry> &list2,vector<tertiary> &list3,vector<Private> &list4){
+    menu();
+     int option;
+   cin>>option;
+    string name_hospital;
+    getline(cin, name_hospital);
+    bool present = false;
+    switch (option)
+    {
+        case 1:
+        cout<<"Enter name of city\n";
+       
+        getline(cin, name_hospital);
+      
+        for(int i = 0; i<list1.size(); i++){
+           
+          if(list1[i].address.city == name_hospital){
+               present = true;
+               list1[i].get_details();
+          }
+          
+        }
+        if(!present){
+            cout<<"Hospital not found\n";
+        }
+        break;
+
+        case 2:
+         cout<<"Enter name of hospital\n";
+       
+        getline(cin, name_hospital);
+        
+        for(int i = 0; i<list2.size(); i++){
+           
+          if(list2[i].address.city == name_hospital){
+               present = true;
+               list2[i].get_details();
+          }
+          
+        }
+        if(!present){
+            cout<<"Hospital not found\n";
+        }
+        break;
+     case 3:
+      cout<<"Enter name of city\n";
+       
+        getline(cin, name_hospital);
+        
+        for(int i = 0; i<list3.size(); i++){
+         // will print all hospitals having city name 
+          if(list3[i].address.city == name_hospital){
+           
+               present = true;
+               cout<<"Detail of this hospital are as follows\n";
+               list3[i].get_details();
+          }
+          cout<<name_hospital<<" ";
+        }
+        if(!present){
+            cout<<"Hospital not found\n";
+        }
+    break;
+        case 4 :
+         cout<<"Enter name of hospital\n";
+       
+        getline(cin, name_hospital);
+         
+        for(int i = 0; i<list4.size(); i++){
+           
+          if(list4[i].address.city == name_hospital){
+               present = true;
+               list4[i].get_details();
+          }
+          
+        }
+        if(!present){
+            cout<<"Hospital not found\n";
+        }
+        break;
+    default:
+        break;
+    }
+  }
 int main()
 {
 
@@ -59,6 +240,7 @@ int main()
     // Atleast 2 each of private hospitals, tertiary, primary, and secondary health centres should be made
     // Private
     Private h1;
+    
 
     h1.name = "BIRLA Hospital Gwalior";
     h1.organization_name = "BIRLA Group of hospitals";
@@ -449,6 +631,34 @@ int main()
     h8.num_doc = 2;
     // Primary hospital initialization completes
     // Hospital initialization completed
+   vector<Primary> list1;
+   list1.push_back(h8);
+   list1.push_back(h7);
+   vector<Secondry> list2;
+   list2.push_back(h5);
+   list2.push_back(h6);
+   vector<tertiary> list3;
+   list3.push_back(h3);
+   list3.push_back(h4);
+   vector<Private> list4;
+   list4.push_back(h1);
+   list4.push_back(h2);
+   cout<<"Welcome to our Application\n";
+   
+    menu2();
+   char a;
+   cin>>a;
+   if(a == 'c'){
+    search_city(list1, list2, list3, list4);
+   }
+   if(a == 'n'){
+    search_name(list1, list2, list3, list4);
+   }
 
+   if(a == 's'){
+      cout<<"good bye....\n";
+      exit(3);
+   }
+  
 
 }
