@@ -28,6 +28,11 @@ class hospital
     {
         int num_doc = 0;
     }
+
+    hospital(int num)
+    {
+        num_doc = num;
+    }
     void get_contact()
     {
         // contact_details.get_contact();
