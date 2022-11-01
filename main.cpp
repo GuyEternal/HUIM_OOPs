@@ -516,25 +516,25 @@ int main()
     temp2.timings.day_avail.clear();
     temp3.timings.day_avail.clear();
 
-    tertiary h4;
+    tertiary h01;
 
-    h4.name = "AIIMS Delhi";
-    h4.organization_name = "Government";
-    h4.address.building = "AIIMS Campus";
-    h4.address.city = "Bhopal";
-    h4.address.state = "Delhi";
-    h4.address.pin_code = "231156";
-    h4.opd_timing.time_slots.push_back("10-12");
-    h4.opd_timing.time_slots.push_back("14-18");
-    h4.opd_timing.day_avail.push_back("Monday");
-    h4.opd_timing.day_avail.push_back("Tuesday");
-    h4.opd_timing.day_avail.push_back("Wednesday");
-    h4.opd_timing.day_avail.push_back("Thursday");
-    h4.opd_timing.day_avail.push_back("Friday");
-    h4.contact_details.email = "aiimsdelhi@aiims.com";
-    h4.contact_details.phone.push_back("6846545664");
+    h01.name = "COAP Bhopal";
+    h01.organization_name = "Government";
+    h01.address.building = "COAP Campus";
+    h01.address.city = "Bhopal";
+    h01.address.state = "Madhya Pradesh";
+    h01.address.pin_code = "458876";
+    h01.opd_timing.time_slots.push_back("10-12");
+    h01.opd_timing.time_slots.push_back("14-18");
+    h01.opd_timing.day_avail.push_back("Monday");
+    h01.opd_timing.day_avail.push_back("Tuesday");
+    h01.opd_timing.day_avail.push_back("Wednesday");
+    h01.opd_timing.day_avail.push_back("Thursday");
+    h01.opd_timing.day_avail.push_back("Friday");
+    h01.contact_details.email = "coapbhopal@coap.com";
+    h01.contact_details.phone.push_back("687894564");
     temp1.department_name = "ENT";
-    temp1.num_doc = 67;
+    temp1.num_doc = 81;
     temp1.timings.time_slots.push_back("10-12");
     temp1.timings.time_slots.push_back("14-18");
     temp1.timings.day_avail.push_back("Monday");
@@ -544,7 +544,7 @@ int main()
     temp1.timings.day_avail.push_back("Friday");
 
     temp2.department_name = "Pediatrics";
-    temp2.num_doc = 75;
+    temp2.num_doc = 91;
     temp2.timings.time_slots.push_back("10-12");
     temp2.timings.time_slots.push_back("14-18");
     temp2.timings.day_avail.push_back("Monday");
@@ -554,7 +554,74 @@ int main()
     temp2.timings.day_avail.push_back("Friday");
 
     temp3.department_name = "Orthopedics";
-    temp3.num_doc = 67;
+    temp3.num_doc = 71;
+    temp3.timings.time_slots.push_back("10-12");
+    temp3.timings.time_slots.push_back("14-18");
+    temp3.timings.day_avail.push_back("Monday");
+    temp3.timings.day_avail.push_back("Tuesday");
+    temp3.timings.day_avail.push_back("Wednesday");
+    temp3.timings.day_avail.push_back("Thursday");
+    temp3.timings.day_avail.push_back("Friday");
+
+    h01.departments.push_back(temp1);
+    h01.departments.push_back(temp2);
+    h01.departments.push_back(temp3);
+
+    h01.surgery_timings.time_slots.push_back("10-12");
+    h01.surgery_timings.time_slots.push_back("14-18");
+    h01.surgery_timings.day_avail.push_back("Monday");
+    h01.surgery_timings.day_avail.push_back("Tuesday");
+    h01.surgery_timings.day_avail.push_back("Wednesday");
+    h01.surgery_timings.day_avail.push_back("Thursday");
+    h01.surgery_timings.day_avail.push_back("Friday");
+    h01.trust_name = "Central Government";
+
+    temp1.timings.time_slots.clear();
+    temp2.timings.time_slots.clear();
+    temp3.timings.time_slots.clear();
+    temp1.timings.day_avail.clear();
+    temp2.timings.day_avail.clear();
+    temp3.timings.day_avail.clear();
+
+    tertiary h4;
+
+    h4.name = "SMIIA Bhopal";
+    h4.organization_name = "Government";
+    h4.address.building = "SMIIA Campus";
+    h4.address.city = "Bhopal";
+    h4.address.state = "Madhya Pradesh";
+    h4.address.pin_code = "862156";
+    h4.opd_timing.time_slots.push_back("10-12");
+    h4.opd_timing.time_slots.push_back("14-18");
+    h4.opd_timing.day_avail.push_back("Monday");
+    h4.opd_timing.day_avail.push_back("Tuesday");
+    h4.opd_timing.day_avail.push_back("Wednesday");
+    h4.opd_timing.day_avail.push_back("Thursday");
+    h4.opd_timing.day_avail.push_back("Friday");
+    h4.contact_details.email = "smiiabhopal@smiia.com";
+    h4.contact_details.phone.push_back("6879545664");
+    temp1.department_name = "ENT";
+    temp1.num_doc = 50;
+    temp1.timings.time_slots.push_back("10-12");
+    temp1.timings.time_slots.push_back("14-18");
+    temp1.timings.day_avail.push_back("Monday");
+    temp1.timings.day_avail.push_back("Tuesday");
+    temp1.timings.day_avail.push_back("Wednesday");
+    temp1.timings.day_avail.push_back("Thursday");
+    temp1.timings.day_avail.push_back("Friday");
+
+    temp2.department_name = "Pediatrics";
+    temp2.num_doc = 79;
+    temp2.timings.time_slots.push_back("10-12");
+    temp2.timings.time_slots.push_back("14-18");
+    temp2.timings.day_avail.push_back("Monday");
+    temp2.timings.day_avail.push_back("Tuesday");
+    temp2.timings.day_avail.push_back("Wednesday");
+    temp2.timings.day_avail.push_back("Thursday");
+    temp2.timings.day_avail.push_back("Friday");
+
+    temp3.department_name = "Orthopedics";
+    temp3.num_doc = 69;
     temp3.timings.time_slots.push_back("10-12");
     temp3.timings.time_slots.push_back("14-18");
     temp3.timings.day_avail.push_back("Monday");
@@ -574,7 +641,7 @@ int main()
     h4.surgery_timings.day_avail.push_back("Wednesday");
     h4.surgery_timings.day_avail.push_back("Thursday");
     h4.surgery_timings.day_avail.push_back("Friday");
-    h4.trust_name = "AIIMS";
+    h4.trust_name = "Central Government";
 
     temp1.timings.time_slots.clear();
     temp2.timings.time_slots.clear();
