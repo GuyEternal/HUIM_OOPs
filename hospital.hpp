@@ -1,21 +1,17 @@
 #ifndef Hospital_HPP
 #define Hospital_HPP
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 #include "location.hpp"
 #include "contact.hpp"
 #include "timing.hpp"
 
-
 class hospital
 {
-    
-    
-  
 
-    public:
-    //Fields
+public:
+    // Fields
     string name;
     string organization_name;
     location address;
@@ -23,24 +19,29 @@ class hospital
     timing opd_timing;
     int num_doc;
 
-    //Member Functions or Methods
-      hospital()
+    // Member Functions or Methods
+    hospital()
     {
         int num_doc = 0;
     }
+
+    hospital(int num)
+    {
+        num_doc = num;
+    }
     void get_contact()
     {
-        // contact_details.get_contact();
+        contact_details.get_contact();
     }
 
     void get_details()
     {
-        cout<<"Name: "<<name<<endl;
-        cout<<"Organisation: "<<organization_name<<endl;
+        cout << "Name: " << name << endl;
+        cout << "Organisation: " << organization_name << endl;
         // address.show();
         // contact_details.show();
         // opd_timing.show();
-        cout<<"No, of doctors: "<<num_doc<<endl;
+        cout << "No, of doctors: " << num_doc << endl;
     }
 
     void set_name(string s)
@@ -55,12 +56,11 @@ class hospital
 
     void set_num_doc()
     {
-        cout<<"Enter number of doctors: ";
-        cin>>this->num_doc;
+        cout << "Enter number of doctors: ";
+        cin >> this->num_doc;
     }
 
-    protected:
-
+protected:
 };
 
 #endif
