@@ -324,6 +324,13 @@ int main()
     h1.surgery_timings.day_avail.push_back("Thursday");
     h1.surgery_timings.day_avail.push_back("Friday");
 
+    temp1.timings.time_slots.clear();
+    temp2.timings.time_slots.clear();
+    temp3.timings.time_slots.clear();
+    temp1.timings.day_avail.clear();
+    temp2.timings.day_avail.clear();
+    temp3.timings.day_avail.clear();
+
     Private h2;
 
     h2.name = "BIRLA Hospital Delhi";
@@ -383,6 +390,13 @@ int main()
     h2.surgery_timings.day_avail.push_back("Wednesday");
     h2.surgery_timings.day_avail.push_back("Thursday");
     h2.surgery_timings.day_avail.push_back("Friday");
+
+    temp1.timings.time_slots.clear();
+    temp2.timings.time_slots.clear();
+    temp3.timings.time_slots.clear();
+    temp1.timings.day_avail.clear();
+    temp2.timings.day_avail.clear();
+    temp3.timings.day_avail.clear();
     // 2 Private hospitals initialized
 
     // 2 Tertiary Health Centres Initializing
@@ -446,6 +460,13 @@ int main()
     h3.surgery_timings.day_avail.push_back("Friday");
     h3.trust_name = "AIIMS";
 
+    temp1.timings.time_slots.clear();
+    temp2.timings.time_slots.clear();
+    temp3.timings.time_slots.clear();
+    temp1.timings.day_avail.clear();
+    temp2.timings.day_avail.clear();
+    temp3.timings.day_avail.clear();
+
     tertiary h4;
 
     h4.name = "AIIMS Delhi";
@@ -505,6 +526,13 @@ int main()
     h4.surgery_timings.day_avail.push_back("Thursday");
     h4.surgery_timings.day_avail.push_back("Friday");
     h4.trust_name = "AIIMS";
+
+    temp1.timings.time_slots.clear();
+    temp2.timings.time_slots.clear();
+    temp3.timings.time_slots.clear();
+    temp1.timings.day_avail.clear();
+    temp2.timings.day_avail.clear();
+    temp3.timings.day_avail.clear();
     // Tertiary hospital initialization ends
 
     // Secondary hospital initialization begins
@@ -562,6 +590,13 @@ int main()
     h5.num_of_beds = 395;
     h5.trust_name = "Bharatiya Janta Trust";
 
+    temp1.timings.time_slots.clear();
+    temp2.timings.time_slots.clear();
+    temp3.timings.time_slots.clear();
+    temp1.timings.day_avail.clear();
+    temp2.timings.day_avail.clear();
+    temp3.timings.day_avail.clear();
+    
     Secondary h6;
 
     h6.name = "IMC Mumbai";
@@ -617,6 +652,14 @@ int main()
     h6.trust_name = "Bharatiya Janta Trust";
     // Secondary hospital initialization ends
     //  Primary hospitals initialization begins
+
+    temp1.timings.time_slots.clear();
+    temp2.timings.time_slots.clear();
+    temp3.timings.time_slots.clear();
+    temp1.timings.day_avail.clear();
+    temp2.timings.day_avail.clear();
+    temp3.timings.day_avail.clear();
+
     Primary h7;
 
     h7.name = "PMH Chakmoh";
