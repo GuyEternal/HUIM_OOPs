@@ -3,11 +3,11 @@
 #include "public.hpp"
 class Secondary : public Public
 {
-   
-    private:
+
+private:
     map<pair<string, string>, bool> credentials_admins;
 
-    public:
+public:
     vector<dept> departments;
     int num_of_beds;
     Secondary()
@@ -18,33 +18,32 @@ class Secondary : public Public
         credentials_admins[a] = true;
         // use of department class
     }
-       void get_details()
+    void get_details()
     {
 
-
-        cout<<"OPD timing for all deparments are \n";
+        cout << "OPD timing for all deparments are \n";
         this->opd_timing.view_slots();
-        cout<<endl;
+        cout << endl;
         cout << "Available department and no of doctors are \n";
         for (auto i : departments)
         {
             cout << i.department_name << " " << i.num_doc << " "
                  << "\n";
         }
-      int k = 0;
+        int k = 0;
         for (auto i : departments)
-        {  
-            cout<<"For Department "<<i.department_name<<endl;
+        {
+            cout << "For Department " << i.department_name << endl;
             i.timings.view_slots();
-            cout<<"\n\n\n\n";
+            cout << "\n\n\n\n";
             k += i.num_doc;
         }
-          cout<<endl;
+        cout << endl;
         cout << "Total doctors in hospital are \n";
         this->num_doc = k;
-        cout<<num_doc<<endl;
-          cout<<"Contact Details of the hospital are \n";
-          this->contact_details.get_contact();
+        cout << num_doc << endl;
+        cout << "Contact Details of the hospital are \n";
+        this->contact_details.get_contact();
     }
 
     void get_opd_details(string dept_name)
@@ -55,9 +54,9 @@ class Secondary : public Public
         {
             if (i.department_name == dept_name)
             {
-                 
+
                 dept_present = true;
-              this->opd_timing.view_slots();
+                this->opd_timing.view_slots();
             }
         }
         if (!dept_present)

@@ -8,10 +8,10 @@ using namespace std;
 
 class Public : public hospital
 {
-    public:
+public:
     string trust_name;
 
-    public:
+public:
     void get_details()
     {
         cout << "trust name is " << this->trust_name << " ";
@@ -19,10 +19,9 @@ class Public : public hospital
 
     void set_trust_name()
     {
-        cout<<"Enter the trust name: ";
-        cin>>trust_name;
+        cout << "Enter the trust name: ";
+        cin >> trust_name;
     }
 };
-
 
 #endif
