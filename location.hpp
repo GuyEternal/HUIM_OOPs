@@ -76,6 +76,17 @@ class location
             this->city = s;
         }
     }
+
+    void update(string build, string City, string District, string State, string pin)
+    {
+        this->building = build;
+        this->city = City;
+        this->district = District;
+        this->state = State;
+        this->pin_code = pin;
+
+    }
 };
+
 
 #endif
