@@ -5,43 +5,39 @@
 
 class Primary : public Public
 {
-  
 
-    timing Timing_opd;
-    map<pair<string, string>, bool> credentials_admins;
-
+    int num_of_beds;
 public:
     Primary()
     {
-        pair<string, string> a = {"ankit", "iamankit"};
-        credentials_admins[a] = true;
-           
+        this->num_doc = 0;
     }
-    void get_details()
-    {
-       cout<<"No of Doctors are "<<num_doc<<endl;
-       Timing_opd.view_slots();
-    }
+    friend void get_details(Primary &T);
 
-    void get_opd_details()
-    {
-       Timing_opd.view_slots();
-    }
+    void set_num_beds();
 
-    void set_avail_doc(int num_doc)
-    {
-
-        cout << "Enter id and password ";
-        string name, password;
-        cin >> name >> password;
-        if (!credentials_admins[{name, password}])
-        {
-            cout << "YOU ARE NOT ALLOWED TO DO CHANGES IN DATABASE\n";
-            return;
-        }
-
-        this->num_doc = num_doc;
-    }
 };
+
+// friend function implementation to demonstrate oops concepts
+void get_details(Primary &T)
+{
+    cout << "\t\tName of Hospital is : " << T.name << endl;
+    cout << "\t\tNo of Doctors are " << T.num_doc << endl;
+    T.opd_timing.view_slots();
+    cout << "\t\tNo of beds are: "<<T.num_of_beds <<endl;
+    cout << "\t\t\n\n";
+    cout << "\t\tContact Details of the hospital are \n";
+    T.contact_details.get_contact();
+    T.get_trust_name();
+}
+
+void Primary ::set_num_beds()
+{
+    if(is_admin() == true)
+    {
+        cout << "\t\tEnter no of beds\n";
+        cin >> this->num_of_beds;
+    }
+}
 
 #endif
